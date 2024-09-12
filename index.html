@@ -18,6 +18,12 @@
       font-family: 'Kanit', sans-serif;
     }
 
+    iframe {
+            border: none;
+            width: 100%;
+            height: 100vh; /* 100% viewport height */
+        }
+
     #canvas-container {
       width: 60%; /* Adjust to your preference */
       height: 100vh;
@@ -46,10 +52,39 @@
       line-height: 38px;
       font-size: 23px;
     }
+
+    @media screen and (max-width : 800px){
+      .text{
+        text-align: center;
+        order: 1;
+      }
+      .canvas-container{
+        order: 2;
+      }
+      .text p {
+        margin: 1em auto;
+      }
+      #text-content p {
+    max-width: 246px;
+    text-align: justify;
+    margin: 1em 0;
+    line-height: 38px;
+    font-size: 23px;
+    margin-left: -16rem;
+}
+#text-content h1 {
+    margin-bottom: 20px;
+    font-size: 3.5em;
+    line-height: 60px;
+    color: white;
+    margin-left: -13rem;
+}
+    }
   </style>
 </head>
 <body>
 
+  <!-- <iframe src="https://codexup.com/html/zgen/index-2-dark.html"></iframe> -->
 <!-- Container for Three.js Moon -->
 <div id="canvas-container">
   <canvas id="webgl"></canvas>
